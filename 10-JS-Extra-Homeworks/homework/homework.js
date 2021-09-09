@@ -10,6 +10,12 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  let matriz = []
+  for (const [key, value] of Object.entries(objeto)) {
+    matriz.push([key,value])
+  }
+
+  return matriz
 }
 
 
@@ -18,6 +24,12 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  //const alfabeto = {a:0,b:0,c:0,d:0,e:0,f:0,g:0,h:0,i:0,j:0,k:0,l:0,m:0,n:0,ñ:0,o:0,p:0,q:0,r:0,s:0,t:0,u:0,v:0,w:0,x:0,y:0,z:0};
+  let resultado = {}; 
+  for(let i in string){
+      resultado[string[i]] = ( resultado[string[i]] || 0 ) + 1; // Incrementamos el valor si el elemento ya existe
+  }
+  return resultado;
 }
 
 
@@ -26,6 +38,17 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var mayuscula = '';
+  var minuscula = '';
+  for (i = 0; i<s.length; i++){ 
+     if(s[i] === s[i].toUpperCase()){ 
+          mayuscula = mayuscula + s[i]; 
+       }
+   else {
+          minuscula = minuscula + s[i];
+        } 
+   }       
+  return (mayuscula + minuscula) 
 }
 
 
@@ -35,6 +58,10 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let resultado='';
+  
+
+
 } 
 
 
